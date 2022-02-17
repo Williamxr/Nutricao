@@ -36,3 +36,9 @@ var paciente = pacientes[i];
     }
 }
 
+var botaoAdd = document.querySelector("#adicionar-paciente");
+botaoAdd.addEventListener("click", function(event){
+    event.preventDefault()
+    console.log("daew");
+})
+

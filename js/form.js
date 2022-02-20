@@ -7,10 +7,8 @@ botaoAdd.addEventListener("click", function(event){      // adicionando escutado
     var paciente = obtemPacienteDoForm(form);
     
     var pacienteTr = montaTr(paciente);
-
-    
+ 
     var tabela = document.querySelector("#tabela-pacientes");
-    // trazendo a tabela criada para a tabela já existente na página
 
     tabela.appendChild(pacienteTr);
 

@@ -12,6 +12,8 @@ botaoAdd.addEventListener("click", function(event){      // adicionando escutado
 
     tabela.appendChild(pacienteTr);
 
+    form.reset();
+
 });
 
 function obtemPacienteDoForm(form){

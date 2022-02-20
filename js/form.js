@@ -31,16 +31,11 @@ function montaTr(paciente){
     var pacienteTr = document.createElement("tr");
     pacienteTr.classList.add("paciente");
 
-    var nomeTd = document.createElement("td"); // criando td
-    nome.Td.classList.add("info-nome");
-    var pesoTd = document.createElement("td");
-    nome.Td.classList.add("info-peso");
-    var alturaTd = document.createElement("td");
-    nome.Td.classList.add("info-altura");
-    var gorduraTd = document.createElement("td");
-    nome.Td.classList.add("info-gordura");
-    var imcTd = document.createElement("td");
-    nome.Td.classList.add("info-imc");
+    var nomeTd = montaTd(paciente.nome, "info-nome");
+    var pesoTd = montaTd(paciente.peso, "info-peso");
+    var alturaTd = montaTd(paciente.altura, "info-altura");
+    var gorduraTd = montaTd(paciente.gordura, "info-gordura");
+    var imcTd = montaTd(paciente.imc, "info-imc");
 
     nomeTd.textContent = paciente.nome; //preenchendo as td's com os valores que peguei do form ali em cima(.value)
     pesoTd.textContent = paciente.peso;
@@ -56,4 +51,12 @@ function montaTr(paciente){
 
     return pacienteTr;
 
+}
+
+function montaTd(dado, classe){
+    var td = document.createElement("td");
+    td.textContent = dado;
+    td.classList.add(classe);
+
+    return td;
 }

@@ -15,10 +15,10 @@ var paciente = pacientes[i];
 
     var tdImc = paciente.querySelector(".info-imc");
 
-    var pesoValido = true;
+    var pesoValido = validaPeso(peso);
     var alturaValida = true;
 
-    if(peso < 0 || peso >= 400){
+    if(!pesoValido){
         pesoValido = false;
         tdImc.textContent = "Peso inválido";
         paciente.classList.add("paciente-invalido");
@@ -33,6 +33,14 @@ var paciente = pacientes[i];
     if(alturaValida && pesoValido){
         var imc = calculaImc(peso, altura); //calculando o imc
         tdImc.textContent = imc; //exibindo o resultado do imc calculado com duas casas decimais
+    }
+}
+
+function validaPeso(peso){
+    if(peso > 0 && peso < 1000){
+        return true;
+    }else{
+        return false;
     }
 }
 

@@ -20,7 +20,8 @@ botaoAdd.addEventListener("click", function(event){      // adicionando escutado
     tabela.appendChild(pacienteTr);
 
     form.reset();
-
+    var mensagensErro = document.querySelector("#mensagens-erro");
+    mensagensErro.innerHTML = "";
 });
 
 function exibeMensagensDeErro(erros){

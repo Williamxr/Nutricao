@@ -71,12 +71,20 @@ function validaPaciente(paciente){
 
     var erros = [];
 
+    if(paciente.nome.length == 0){
+        erros.push("Nome inválido");
+    }
+
     if(!validaPeso(paciente.peso)){
         erros.push("Peso é inválido");
     }
 
     if(!validaAltura(paciente.altura)){
         erros.push("Altura é inválida");
+    }
+
+    if(paciente.gordura.length == 0){
+        erros.push("Gordura inválida");
     }
 
     return erros;
